@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "arg": "^5.0.2"
+    "arg": "^5.0.2",
+    "chalk": "^5.2.0"
   }
 }
