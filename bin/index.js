@@ -3,7 +3,7 @@
 import { readdir } from 'fs/promises'
 import { join } from 'path'
 import arg from 'arg'
-import chalk, { Chalk } from 'chalk'
+import chalk from 'chalk'
 
 const pastelPalette = [
     '#74ebd5', '#74e3eb',
