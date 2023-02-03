@@ -59,12 +59,19 @@ const args = arg({
 })
 
 if (args['--help']) {
-    console.log('Usage: print-tree [arguments]')
-    console.log('Print your current directory tree');
+    console.log('');
+    console.log('Usage: print-tree [arguments]');
+    console.log('Print your current directory tree.');
+    console.log('');
     console.log('Arguments');
-    console.log('-d, --depth <num> Max depth to print');
-    console.log('-h, --help        Prints this guide');
-    console.log('-u, --uppercase   Prints the tree in uppercase');
+    console.log('-d, --depth <num>    Max depth to print');
+    console.log('-h, --help           Prints this guide');
+    console.log('-u, --uppercase      Prints the tree in uppercase');
+    console.log('-p, --palette <name> Choose a palette (80s | pastel | fire)');
+    console.log('-b, --bold           Make the output bold');
+    console.log('-i, --italic         Make the output italic');
+    console.log('--background         Use the palette on background');
+    console.log('--inverse            Invert background and foreground colors');
 
     process.exit(0); // Exit without error.
 }
