@@ -35,7 +35,7 @@ const firePalette = [
     '#fca544', '#fc9943',
     '#fc8f43', '#fb8542',
     '#fb7841', '#fb6d40',
-    '#fb643f', 
+    '#fb643f',
 ];
 
 const args = arg({
@@ -178,16 +178,19 @@ function buildStyleStack() {
         case 'fire':
             auxPalette = firePalette;
             break;
-        default:
-            break;
     }
 
+    if (auxPalette.length == 0)
+        auxPalette.push('')
+
     return auxPalette.map(hex => {
-        let chalkBuilder;
-        if (background)
-            chalkBuilder = chalk.bgHex(hex);
-        else
-            chalkBuilder = chalk.hex(hex);
+        let chalkBuilder = chalk;
+        if (hex.length > 0) {
+            if (background)
+                chalkBuilder = chalk.bgHex(hex);
+            else
+                chalkBuilder = chalk.hex(hex);
+        }
 
         if (inverse)
             chalkBuilder = chalkBuilder.inverse;
