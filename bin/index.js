@@ -89,6 +89,13 @@ let auxStyleStack = [];
 
 await printTree('./', 1, false)
 
+/**
+ * Recursively print the current directory tree.
+ * @param {string} path Path to iterate through
+ * @param {number} iteration Iteration index
+ * @param {boolean} isLastDirectory True if current path is last
+ * @returns 
+ */
 async function printTree(path, iteration, isLastDirectory) {
     if (iteration == maxDepth) return;
 
@@ -107,6 +114,14 @@ async function printTree(path, iteration, isLastDirectory) {
     }
 }
 
+/**
+ * Prints the line that will represent a node in the tree.
+ * @param {boolean} isDirectory True if the current dirent is a directory (not a file)
+ * @param {boolean} isLastDirent True if the current dirent is the last dirent
+ * @param {number} iteration Iteration index
+ * @param {string} name Dirent name
+ * @param {boolean} isLastDirectory True if the current dirent is the last directory
+ */
 function printDirent(isDirectory, isLastDirent, iteration, name, isLastDirectory) {
     let margin = ''
 
@@ -128,6 +143,11 @@ function printDirent(isDirectory, isLastDirent, iteration, name, isLastDirectory
     console.log(stylizedMessage);
 }
 
+/**
+ * Applies styles to the text.
+ * @param {string} text 
+ * @returns Stylized text
+ */
 function applyStyles(text) {
     if (styleStack.length == 0) return text;
     const chalkHex = styleStack.pop();
@@ -142,6 +162,10 @@ function applyStyles(text) {
     return stylizedText;
 }
 
+/**
+ * Generates a stack of styles according to the values received in the command's style arguments
+ * @returns {ChalkInstance[]}
+ */
 function buildStyleStack() {
     let auxPalette = []
     switch (palette) {
