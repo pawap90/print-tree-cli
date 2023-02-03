@@ -2,10 +2,10 @@ A simple (and a bit ugly) CLI that displays the structure of the current directo
 
 ![image](https://user-images.githubusercontent.com/2507959/216728044-a2f88c5f-f20d-4706-9bfe-3d77c2e557a9.png)
 
-Watch the series:
-1. Create a CLI with Node.js
-2. Handling Arguments
-3. Style the Output
+🎥 **Watch the series:**
+1. [Create a CLI with Node.js](https://www.instagram.com/p/CnSCKkBK7eF/)
+2. [Handling Arguments](https://www.instagram.com/p/CnmnpxfKW6Q/)
+3. [Style the Output](https://www.instagram.com/p/CoKo5deKszh/)
 
 ## Dependencies
 - [Node.js](https://nodejs.org/en/)
