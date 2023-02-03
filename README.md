@@ -57,5 +57,3 @@ Arguments
 --background         Use the palette on background
 --inverse            Invert background and foreground colors
 ```
-
-Go to your browser and navigate to http://localhost:8000. You should see the game running.
