@@ -4,23 +4,20 @@ import { readdir, stat } from 'fs/promises';
 import { join, resolve } from 'path';
 import { table, getBorderCharacters } from 'table';
 
-await printTable('./')
+const basePath = './';
+const rows = [['Name', 'Type', 'Size']];
+const dirContent = await readdir(basePath, { withFileTypes: true });
 
-async function printTable(path) {
-    const dirContent = await readdir(path, { withFileTypes: true });
-    const rows = [['Name', 'Type', 'Size']];
-
-    for (const dirent of dirContent) {
-        const direntStats = await stat(join(path, dirent.name));
-        rows.push([
-            dirent.name,
-            direntStats.isFile() ? '📄' : '📁',
-            `${(direntStats.size / 1024).toFixed(2)} kB`
-        ]);
-    }
-
-    console.log(table(rows, {
-        header: { content: 'CONTENT\n' + resolve(path), alignment: 'center' },
-        border: getBorderCharacters('norc')
-    }));
+for (const dirent of dirContent) {
+    const direntStats = await stat(join(basePath, dirent.name));
+    rows.push([
+        dirent.name,
+        direntStats.isFile() ? '📄' : '📁',
+        `${(direntStats.size / 1024).toFixed(2)} kB`
+    ]);
 }
+
+console.log(table(rows, {
+    header: { content: 'CONTENT\n' + resolve(basePath), alignment: 'center' },
+    border: getBorderCharacters('norc')
+}));
