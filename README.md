@@ -1,4 +1,4 @@
-A simple (and a bit ugly) CLI that displays the structure of the current directory. Created for my Instagram series "Creatubg a Node.js CLI".
+A simple (and a bit ugly) CLI that displays the structure of the current directory. Created for my Instagram series "Building a Node.js CLI".
 
 ![image](https://user-images.githubusercontent.com/2507959/216728044-a2f88c5f-f20d-4706-9bfe-3d77c2e557a9.png)
 
