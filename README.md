@@ -2,6 +2,9 @@ A simple (and a bit ugly) CLI that displays the structure of the current directo
 
 ![image](https://user-images.githubusercontent.com/2507959/216728044-a2f88c5f-f20d-4706-9bfe-3d77c2e557a9.png)
 
+![image](https://user-images.githubusercontent.com/2507959/221711519-b97b38ab-7e9e-4705-b4c2-02e8dab9d387.png)
+
+
 🎥 **Watch the series:**
 1. [Create a CLI with Node.js](https://www.instagram.com/p/CnSCKkBK7eF/)
 2. [Handling Arguments](https://www.instagram.com/p/CnmnpxfKW6Q/)
@@ -56,4 +59,14 @@ Arguments
 -i, --italic         Make the output italic
 --background         Use the palette on background
 --inverse            Invert background and foreground colors
+```
+
+```
+print-table --help 
+
+Usage: print-table [arguments]
+Print the content of the current directory.
+
+Arguments
+-h, --help           Prints this guide
 ```
