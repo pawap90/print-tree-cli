@@ -3,6 +3,7 @@
 import { readdir, stat } from 'fs/promises';
 import { join, resolve } from 'path';
 import { table, getBorderCharacters } from 'table';
+import chalk from 'chalk';
 
 const basePath = './';
 const rows = [['Name', 'Type', 'Size']];
@@ -18,6 +19,8 @@ for (const dirent of dirContent) {
 }
 
 console.log(table(rows, {
-    header: { content: 'CONTENT\n' + resolve(basePath), alignment: 'center' },
+    header: {
+        content: chalk.yellow.bold('DIRECTORY CONTENT\n') + chalk.dim.italic(resolve(basePath))
+    },
     border: getBorderCharacters('norc')
 }));
